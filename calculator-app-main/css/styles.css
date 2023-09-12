@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@500;600;700;900&display=swap');
+:root{
+    /* theme 1 */
+    --th1-bg-color :   hsl(222, 26%, 31%);
+    --th1-num:hsl(221, 14%, 31%);
+    --th1-key-bg :hsl(30, 25%, 89%);
+    --th1-keyboard-bg:hsl(223, 31%, 23%);
+    --th1-ip-bg: hsl(224, 36%, 15%);
+    --th1-cal-font-color:hsl(0, 0%, 100%);
+    --th1-circle-bg:hsl(6, 70%, 34%);
+    --th1-equal-bg:hsl(6, 63%, 50%);
+    --th1-reset:hsl(30, 25%, 89%);
+
+    /* theme2 */
+    --th2-keyboard-bgr:hsl(0, 5%, 81%);
+    --th2-num:hsl(185, 42%, 37%);
+    --th2-equal-bg:hsl(25, 98%, 40%);
+    --th2-hov-key-col:hsl(0, 0%, 100%);
+    --th2-bg-color:hsl(0, 0%, 93%);
+
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "League Spartan";
+    box-sizing: border-box;
+    color: var(--th1-cal-font-color);
+    user-select: none;
+    
+
+}
+
+.main-external{
+    /* border: 2px solid black; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--th1-bg-color);
+    /* background-color:  var(--th2-bg-color); */
+    /* background-color: var(--th2-bg-color); */
+}
+.wrapper{
+    /* border: 2px solid green; */
+    padding: 10px;
+    height: auto;
+    width: 35%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around; */
+}
+.head-comp{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+    height: 20%;
+}
+/* .nums .help p{
+    margin-left: 8px;
+
+} */
+.help :nth-child(1){
+    margin-left: 6px;
+}
+.help :nth-child(2){
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+}
+.nums{
+
+    /* border: 1px solid black; */
+    padding-bottom: 7px;
+    margin-left: 20px;
+    
+    
+}
+.help{
+    display: flex;
+    /* border: 1px solid wheat; */
+    justify-content: flex-end;
+}
+
+.slide{
+    /* border: 1px solid wheat;*/
+    height: 20px;
+    /* width: 50px; */
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--th1-ip-bg);
+    position: relative;
+    left: 2px;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+
+    /* justify-content: center; */
+    transition: all 0.22s ease;
+
+
+}
+
+
+.slide:hover{
+    cursor: pointer;
+}
+.first {
+    align-items: center;
+
+}
+.second{
+    justify-content: center;
+}
+.third{
+    justify-content: flex-end;
+}
+
+.circle{
+    height: 10px;
+    /* border: 2px solid blue; */
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--th1-circle-bg);
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.22s ease;
+
+
+}
+.body-comp > div{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+
+
+}
+.body-comp > div > div{
+    /* border: 1px solid rebeccapurple; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: var(--th1-key-bg );
+    color: var(--th1-num);
+    /* color: ; */
+    margin: 3px;
+    font-size: 1.8em;
+    font-weight: 600;
+    padding: 8px;
+}
+.body-comp > div > div:hover{
+    cursor: pointer;
+    background-color:    var(--th2-hov-key-col);
+    transition: background-color 0.3s ease;
+    border: none;
+
+}
+.body-comp{
+    background-color: var(--th1-keyboard-bg);
+    /* background-color: var(--th2-keyboard-bgr); */
+    padding: 8px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.body-comp > div > div:active{
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+
+}
+.body-comp .rows-5{
+    padding: 8px;
+}
+.body-comp .rows-5 > div { 
+    width: 45%;
+
+}
+
+.cal{
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: flex-end;
+    font-weight: 900;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.theme{
+    /* border: 1px solid gray; */
+    display: flex;
+    font-weight:900;
+     font-size: 0.5em;
+    align-items: flex-end;
+    
+
+}
+.theme p{
+    padding-bottom:10px ;
+}
+
+
+.ip-comp{
+    /* border: 1px solid white; */
+    background-color: var(--th1-ip-bg);
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    
+
+}
+
+.div-ip-nums{
+    /* border: 1px solid red; */
+    font-size: 3em;
+    overflow: hidden;
+    overflow-x: visible;
+
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#btns-eq{
+    background-color:  var(--th2-equal-bg);
+    /* color: white; */
+}
+#reset,#del{
+    background-color:  hsl(225, 21%, 49%);
+    color: var(--th1-reset);
+
+}
+#reset:hover, #del:hover{
+    background-color: #3498db
+    ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* border: none; */
+}
+
+@media screen and (width<950px) {
+    .wrapper{
+        width: 70%;
+    }
+
+}
+@media screen and (width<500px) 
+{
+    .main-external{
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+}
+
+/* 
+@keyframes blink {
+    0%, 100% {
+      visibility: visible;
+    }
+    50% {
+      visibility: hidden;
+    }
+  }
+  
+  Apply the blinking animation to the text when the class is added */
+/* .ip-comp  .blinking {
+    animation: blink 2s infinite;
+  } */
+
+  .no-select {
+    user-select: none;
+  }
+  
